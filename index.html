@@ -8,6 +8,13 @@
 <meta property="og:title" content="Dual Reality — A Soldier's Diary from October 7th">
 <meta property="og:description" content="Written by a soldier. In war. A digest of undigested emotions. Coming soon on Amazon.">
 <meta property="og:image" content="img/cover.jpg">
+<meta property="og:type" content="book">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dual Reality — A Soldier's Diary from October 7th">
+<meta name="twitter:description" content="A raw diary of poems and illustrations written by a young IDF paratrooper. Coming soon on Amazon.">
+<meta name="twitter:image" content="img/cover.jpg">
+<meta name="author" content="Tal Hoch">
+<meta name="theme-color" content="#0E2A24">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Rubik:wght@300;400;500;600&family=Frank+Ruhl+Libre:wght@400;500;700&family=Secular+One&display=swap" rel="stylesheet">
@@ -184,6 +191,42 @@
   footer .flinks a:hover{color:var(--gold2)}
   footer .fnote{margin-top:18px;color:#7f8c85;font-size:.78rem}
 
+  /* ACCESSIBILITY */
+  .skip{position:absolute;left:-9999px;top:0;background:var(--gold);color:#2a2008;padding:12px 20px;border-radius:0 0 10px 0;z-index:999;font-weight:600;text-decoration:none}
+  .skip:focus{left:0}
+  a:focus-visible,button:focus-visible,summary:focus-visible,.btn:focus-visible,.chip:focus-visible{outline:3px solid var(--gold2);outline-offset:3px;border-radius:5px}
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+    .reveal{opacity:1!important;transform:none!important}
+  }
+
+  /* FAQ */
+  .faq{background:var(--cream)}
+  .faq h2{font-size:2.8rem;color:var(--ink);text-align:center}
+  .faq-list{max-width:800px;margin:44px auto 0}
+  .faq details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:14px;transition:.25s}
+  .faq details[open]{box-shadow:0 10px 30px rgba(20,58,49,.1);border-color:var(--gold2)}
+  .faq summary{cursor:pointer;padding:22px 26px;font-weight:500;font-size:1.1rem;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary:after{content:'+';font-family:'Cormorant Garamond',serif;font-size:1.9rem;color:var(--gold);transition:.25s;line-height:1}
+  .faq details[open] summary:after{transform:rotate(45deg)}
+  .faq .a{padding:0 26px 24px;color:#4a463c;font-size:1.04rem;line-height:1.75}
+  .faq .a a{color:var(--sea);font-weight:500}
+
+  /* LEGAL */
+  .legal{background:var(--deep2);color:#b9c7c0;padding:56px 0 10px}
+  .legal .wrap{max-width:900px}
+  .legal h3{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.5rem;text-align:center;margin-bottom:8px;font-weight:600}
+  .legal .sub{text-align:center;color:#8fa29a;font-size:.84rem;margin-bottom:26px}
+  .legal details{border-top:1px solid rgba(255,255,255,.12)}
+  .legal summary{cursor:pointer;padding:16px 2px;font-weight:500;color:#e7ddcc;font-size:.98rem;list-style:none;display:flex;justify-content:space-between}
+  .legal summary::-webkit-details-marker{display:none}
+  .legal summary:after{content:'+';color:var(--gold2);font-size:1.3rem;line-height:1}
+  .legal details[open] summary:after{content:'\2013'}
+  .legal .a{padding:2px 2px 20px;font-size:.84rem;line-height:1.8;color:#9fb0a8}
+  .legal .a b{color:#cfe0d8}
+  .legal .a a{color:var(--gold2)}
+
   @media(max-width:860px){
     .hero{min-height:auto;padding:100px 0 70px}
     .hero-grid,.author-grid,.sfat-grid{grid-template-columns:1fr;gap:40px}
@@ -205,11 +248,48 @@
     .sfat-feature{grid-template-columns:1fr}
   }
 </style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Book",
+      "name":"Dual Reality",
+      "alternateName":"מציאות כפולה",
+      "author":{"@type":"Person","name":"Tal Hoch"},
+      "inLanguage":"en",
+      "bookFormat":["https://schema.org/Paperback","https://schema.org/EBook"],
+      "genre":["Poetry","War","Memoir"],
+      "about":["October 7 war","Israel","IDF reserves","war poetry","grief","resilience"],
+      "description":"A raw diary of short poems and hand-drawn illustrations written by a young IDF paratrooper during the war that began October 7th, 2023. Coming soon on Amazon."
+    },
+    {
+      "@type":"Person",
+      "name":"Tal Hoch",
+      "description":"Paratrooper in the IDF reserves and author of Dual Reality.",
+      "email":"talbooks12@gmail.com",
+      "sameAs":["https://www.instagram.com/tal_hoch","https://www.metziotkfula.com/"]
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"What is Dual Reality about?","acceptedAnswer":{"@type":"Answer","text":"A diary of short poems and hand-drawn illustrations written by a young IDF paratrooper during the war that began on October 7th, 2023, holding the front line and ordinary life back home at once."}},
+        {"@type":"Question","name":"Where can I buy it?","acceptedAnswer":{"@type":"Answer","text":"The English edition will be available exclusively on Amazon, in Kindle and paperback. Launching soon."}},
+        {"@type":"Question","name":"Is this the English version of the Hebrew book?","acceptedAnswer":{"@type":"Answer","text":"Yes. Dual Reality is the English edition of the Hebrew מציאות כפולה, which has reached hundreds of readers across Israel."}},
+        {"@type":"Question","name":"Who wrote it?","acceptedAnswer":{"@type":"Answer","text":"Tal Hoch, a paratrooper in the IDF reserves and a student at Reichman University, who wrote it in the nights between operations."}},
+        {"@type":"Question","name":"Where do the proceeds go?","acceptedAnswer":{"@type":"Answer","text":"A portion of the proceeds from every copy supports Sfat HaYam, which helps IDF reservists and bereaved families return to routine."}},
+        {"@type":"Question","name":"Can I order copies in bulk, or invite Tal to speak?","acceptedAnswer":{"@type":"Answer","text":"Yes. For bulk and organizational orders or speaking engagements, email talbooks12@gmail.com."}}
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
+<a href="#main" class="skip">Skip to content</a>
 
 <!-- HERO -->
-<header class="hero">
+<header class="hero" id="main" tabindex="-1">
   <div class="wrap hero-grid">
     <div class="hero-text">
       <span class="eyebrow reveal">A Soldier's Diary · October 7th &amp; Beyond</span>
@@ -383,6 +463,24 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <span class="eyebrow reveal" style="display:block;text-align:center">Questions &amp; answers</span>
+    <div class="rule reveal"></div>
+    <h2 class="reveal" id="faq-title">Good to know</h2>
+    <div class="faq-list">
+      <details class="reveal d1"><summary>What is Dual Reality about?</summary><div class="a">It's a diary of short poems and hand-drawn illustrations, written by a young IDF paratrooper during the war that began on October 7th, 2023. It holds two worlds at once: the front line, and the quiet of ordinary life back home. Raw, honest, and written in real time, not after the fact.</div></details>
+      <details class="reveal d1"><summary>Where can I buy it?</summary><div class="a">The English edition will be available exclusively on <b>Amazon</b>, in both Kindle and paperback. It's launching soon, follow <a href="https://www.instagram.com/tal_hoch" target="_blank" rel="noopener">@tal_hoch</a> to hear the moment it goes live.</div></details>
+      <details class="reveal d1"><summary>Is this the English version of the Hebrew book?</summary><div class="a">Yes. Dual Reality is the English edition of the Hebrew <i>מציאות כפולה</i>, which has already reached hundreds of readers across Israel. You can see the original at <a href="https://www.metziotkfula.com/" target="_blank" rel="noopener">metziotkfula.com</a>.</div></details>
+      <details class="reveal d1"><summary>Who wrote it?</summary><div class="a">Tal Hoch, a paratrooper in the IDF reserves and a student at Reichman University. He wrote the book in the long nights between operations, not for publication, but to process what he was living through.</div></details>
+      <details class="reveal d1"><summary>Where do the proceeds go?</summary><div class="a">A portion of the proceeds from every copy supports <b>Sfat HaYam</b>, a project that helps IDF reservists and bereaved families find their way back to routine. Learn more at <a href="https://www.sfat-hayam.com/" target="_blank" rel="noopener">sfat-hayam.com</a>.</div></details>
+      <details class="reveal d1"><summary>Can I order copies in bulk, or invite Tal to speak?</summary><div class="a">Yes, for bulk and organizational orders, speaking engagements, or any other question, email <a href="mailto:talbooks12@gmail.com">talbooks12@gmail.com</a> and Tal will get back to you personally.</div></details>
+    </div>
+    <p class="reveal d2" style="text-align:center;margin-top:34px;color:var(--mut)">Still have a question? Write to <a href="mailto:talbooks12@gmail.com" style="color:var(--sea);font-weight:500">talbooks12@gmail.com</a></p>
+  </div>
+</section>
+
 <!-- FINAL -->
 <section class="final">
   <div class="wrap">
@@ -394,15 +492,62 @@
   </div>
 </section>
 
+<!-- LEGAL -->
+<section class="legal" aria-labelledby="legal-title">
+  <div class="wrap">
+    <h3 id="legal-title">Legal &amp; Policies</h3>
+    <p class="sub">Please read the following. By using this website you agree to these terms.</p>
+
+    <details><summary>Privacy Policy</summary><div class="a">
+      This website (the "Site") is an informational page about the book <b>Dual Reality</b> by Tal Hoch. We respect your privacy and aim to collect as little data as possible.
+      <br><br><b>Information we collect.</b> The Site does not require you to create an account or submit personal information to browse it. If you choose to contact us by email, we receive the information you send (such as your name and email address) solely to respond to you. Like most websites, our hosting provider may automatically log standard technical data (such as IP address, browser type, and pages visited) for security and analytics.
+      <br><br><b>How we use it.</b> We use any information only to respond to your inquiries, fulfil requests, and improve the Site. We do not sell, rent, or share your personal information with third parties for their marketing.
+      <br><br><b>Third-party links.</b> The Site links to external services including Amazon, Instagram, and Sfat HaYam. Those services have their own privacy policies, and we are not responsible for their content or practices.
+      <br><br><b>Your rights.</b> Depending on where you live (for example, under the California Consumer Privacy Act or the EU/UK GDPR), you may have the right to access, correct, or delete personal information we hold about you. To make a request, email <a href="mailto:talbooks12@gmail.com">talbooks12@gmail.com</a>.
+      <br><br><b>Children.</b> The Site is not directed to children under 13, and we do not knowingly collect their information.
+    </div></details>
+
+    <details><summary>Terms of Use</summary><div class="a">
+      <b>Acceptance.</b> By accessing or using this Site, you agree to these Terms of Use. If you do not agree, please do not use the Site.
+      <br><br><b>Purpose.</b> The Site is provided for general informational purposes about the book Dual Reality. All purchases of the book are made through Amazon and are subject to Amazon's own terms, policies, pricing, and availability. We are not responsible for transactions conducted on Amazon or any other third-party platform.
+      <br><br><b>Intellectual property.</b> All content on this Site, including the text, poems, illustrations, cover art, photographs, design, and the title "Dual Reality," is the property of Tal Hoch or its respective owners and is protected by copyright and other intellectual-property laws. You may not copy, reproduce, republish, distribute, or create derivative works from any content without prior written permission.
+      <br><br><b>Acceptable use.</b> You agree not to misuse the Site, attempt to disrupt it, or use it for any unlawful purpose.
+      <br><br><b>Changes.</b> We may update the Site and these Terms at any time without notice.
+      <br><br><b>Governing law.</b> These Terms are governed by the laws of the State of Israel, without regard to conflict-of-law rules, except where mandatory consumer-protection laws of your place of residence apply.
+    </div></details>
+
+    <details><summary>Disclaimer &amp; Limitation of Liability</summary><div class="a">
+      The Site and its content are provided <b>"as is" and "as available,"</b> without warranties of any kind, whether express or implied, including but not limited to merchantability, fitness for a particular purpose, or non-infringement. While we strive for accuracy, we do not warrant that the information on the Site (including availability, pricing, or launch dates) is complete, current, or error-free.
+      <br><br>To the fullest extent permitted by law, Tal Hoch and anyone associated with the Site shall not be liable for any direct, indirect, incidental, consequential, or other damages arising from your use of, or inability to use, the Site or any linked third-party service. Your sole remedy for dissatisfaction with the Site is to stop using it.
+      <br><br><b>Sensitive content.</b> This book and Site reference war, loss, and trauma. Please engage with the material at your own discretion.
+    </div></details>
+
+    <details><summary>Amazon &amp; Charitable Disclosure</summary><div class="a">
+      <b>Third-party retailer.</b> Dual Reality is sold through Amazon. "Amazon," "Kindle," and related marks are trademarks of Amazon.com, Inc. or its affiliates. This Site is not endorsed by or affiliated with Amazon beyond the sale of the book through its platform. Any links to Amazon may be standard product links; should an affiliate program ever be used, we will disclose it clearly in accordance with FTC guidelines.
+      <br><br><b>Charitable contribution.</b> A portion of the proceeds from sales of Dual Reality is contributed to support the work of <b>Sfat HaYam</b>. This is a voluntary contribution by the author; purchasing the book is not a tax-deductible charitable donation, and the Site makes no representation as to the tax treatment of your purchase.
+    </div></details>
+
+    <details><summary>Accessibility Statement</summary><div class="a">
+      We want this Site to be usable by everyone, including people with disabilities. We aim to conform to the <b>Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</b>. This includes descriptive text for images, keyboard navigation, visible focus indicators, readable color contrast, and respect for your system's "reduce motion" setting (which pauses animations).
+      <br><br>Accessibility is an ongoing effort. If you encounter any barrier or difficulty using this Site, please contact us at <a href="mailto:talbooks12@gmail.com">talbooks12@gmail.com</a> and we will do our best to help and to fix the issue.
+    </div></details>
+
+    <details><summary>Contact</summary><div class="a">
+      For any question, bulk or organizational orders, speaking requests, press, or accessibility and privacy matters, email <a href="mailto:talbooks12@gmail.com">talbooks12@gmail.com</a>.
+    </div></details>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div class="ftitle">Dual Reality</div>
     <div class="flinks">
       <a href="https://www.instagram.com/tal_hoch" target="_blank" rel="noopener">Instagram</a> ·
       <a href="https://www.metziotkfula.com/" target="_blank" rel="noopener">Hebrew Website</a> ·
-      <a href="https://www.sfat-hayam.com/" target="_blank" rel="noopener">Sfat HaYam</a>
+      <a href="https://www.sfat-hayam.com/" target="_blank" rel="noopener">Sfat HaYam</a> ·
+      <a href="mailto:talbooks12@gmail.com">Contact</a>
     </div>
-    <div class="fnote">© Tal Hoch · Illustrations &amp; cover by Shahar Yitzhaki · A soldier's diary from October 7th and beyond.</div>
+    <div class="fnote">© 2026 Tal Hoch. All rights reserved. · Illustrations &amp; cover by Shahar Yitzhaki.<br>Dual Reality — a soldier's diary from October 7th and beyond. All poems, illustrations, and photographs are the property of their respective owners and may not be reproduced without permission.</div>
   </div>
 </footer>
 
