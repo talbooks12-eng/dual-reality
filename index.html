@@ -140,9 +140,11 @@
   .author{background:var(--cream)}
   .author-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
   .author-photos{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:200px;gap:14px}
-  .author-photos img{width:100%;height:100%;object-fit:cover;border-radius:12px;box-shadow:0 14px 34px rgba(20,58,49,.16);transition:.3s}
-  .author-photos img:hover{transform:scale(1.02)}
-  .author-photos img.tall{grid-row:span 2}
+  .author-photos figure{position:relative;margin:0;border-radius:12px;overflow:hidden;box-shadow:0 14px 34px rgba(20,58,49,.16)}
+  .author-photos figure.tall{grid-row:span 2}
+  .author-photos img{width:100%;height:100%;object-fit:cover;display:block;transition:.5s}
+  .author-photos figure:hover img{transform:scale(1.04)}
+  .author-photos figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 11px;background:linear-gradient(transparent,rgba(14,42,36,.9));color:#fff;font-size:.82rem;letter-spacing:.02em;line-height:1.35}
   .author-text h2{font-size:3rem}
   .author-text .heb{color:var(--sea);font-size:1.25rem;margin:6px 0 20px}
   .author-text p{color:#3c382f;margin-bottom:16px;font-size:1.08rem}
@@ -402,9 +404,9 @@
 <section class="author">
   <div class="wrap author-grid">
     <div class="author-photos reveal">
-      <img class="tall" src="img/portrait.jpg" alt="Tal in uniform">
-      <img src="img/lecture.jpg" alt="Tal speaking on stage">
-      <img src="img/brothers.jpg" alt="Tal with his unit">
+      <figure class="tall"><img src="img/portrait.jpg" alt="Tal in uniform, Lebanon"><figcaption>Tal · last reserve round, Lebanon</figcaption></figure>
+      <figure><img src="img/lecture.jpg" alt="Tal speaking on stage"><figcaption>Tal's lecture</figcaption></figure>
+      <figure><img src="img/brothers.jpg" alt="With his unit"><figcaption>October 7th</figcaption></figure>
     </div>
     <div class="author-text">
       <span class="eyebrow reveal">The author</span>
