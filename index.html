@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dual Reality — A Soldier's Diary from October 7th | Tal Hoch</title>
+<meta name="description" content="Dual Reality — a raw, moving diary written by a young IDF paratrooper during the war that began October 7th. Coming soon on Amazon. A portion of proceeds supports reservists returning home.">
+<meta property="og:title" content="Dual Reality — A Soldier's Diary from October 7th">
+<meta property="og:description" content="Written by a soldier. In war. A digest of undigested emotions. Coming soon on Amazon.">
+<meta property="og:image" content="img/cover.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Rubik:wght@300;400;500;600&family=Frank+Ruhl+Libre:wght@400;500;700&family=Secular+One&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF6EC; --paper:#F0E9D9; --panel:#E9E1CE;
+    --ink:#24231E; --sea:#2E5D54; --sea2:#3f7a6e; --deep:#0E2A24; --deep2:#143a31;
+    --gold:#B88A3E; --gold2:#D9B06A; --mut:#6A6456; --line:#DED5C0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Rubik',sans-serif;color:var(--ink);background:var(--cream);line-height:1.8;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.12;letter-spacing:.2px}
+  .heb{font-family:'Frank Ruhl Libre',serif;direction:rtl}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 30px}
+  section{padding:100px 0;position:relative}
+  .center{text-align:center}
+  .eyebrow{font-weight:600;letter-spacing:.3em;text-transform:uppercase;font-size:.7rem;color:var(--gold)}
+  .rule{width:60px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:20px auto 30px}
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.1s}.d2{transition-delay:.22s}.d3{transition-delay:.34s}.d4{transition-delay:.46s}
+  a{color:var(--sea)}
+  .btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#2a2008;padding:16px 36px;border-radius:999px;font-weight:600;font-size:1rem;text-decoration:none;box-shadow:0 10px 30px rgba(184,138,62,.35);transition:.25s;letter-spacing:.02em}
+  .btn:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(184,138,62,.45)}
+  .btn-ghost{background:transparent;border:1.5px solid rgba(255,255,255,.6);color:#fff;box-shadow:none}
+  .btn-ghost:hover{background:rgba(255,255,255,.1);transform:translateY(-3px)}
+
+  /* HERO */
+  .hero{min-height:100vh;display:flex;align-items:center;background:
+     radial-gradient(1200px 600px at 75% 20%,rgba(63,122,110,.25),transparent 60%),
+     linear-gradient(160deg,#0E2A24 0%,#143a31 55%,#1c4a3f 100%);color:#f3eee2;overflow:hidden;position:relative}
+  .hero:after{content:"";position:absolute;inset:0;background:url('img/town.jpg') center/cover;opacity:.13;mix-blend-mode:luminosity}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;position:relative;z-index:2}
+  .hero-text .eyebrow{color:var(--gold2);display:block;margin-bottom:22px}
+  .hero-text h1{font-size:5.6rem;color:#fff;line-height:.98;letter-spacing:-1px}
+  .hero-heb{font-size:1.7rem;color:#9fc7b8;margin:10px 0 26px}
+  .hero-text .lead{font-size:1.35rem;color:#dfe9e3;font-weight:300;max-width:440px}
+  .hero-text .sub{font-size:1.02rem;color:#aec4bb;margin-top:12px;max-width:460px}
+  .hero-cta{margin-top:34px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  .hero-charity{margin-top:26px;font-size:.92rem;color:#9fc7b8}
+  .hero-cover{display:flex;justify-content:center;position:relative}
+  .hero-cover img{width:340px;max-width:82%;border-radius:10px;box-shadow:0 40px 90px rgba(0,0,0,.55);animation:float 6s ease-in-out infinite}
+  .hero-cover:before{content:"";position:absolute;width:360px;height:360px;background:radial-gradient(circle,rgba(217,176,106,.25),transparent 65%);filter:blur(10px);z-index:0}
+  @keyframes float{0%,100%{transform:translateY(0) rotate(-2.5deg)}50%{transform:translateY(-16px) rotate(-2.5deg)}}
+  .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:#9fc7b8;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;z-index:2;animation:bob 2s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+
+  /* QUOTE STRIP */
+  .strip{background:var(--deep);color:#f3efe6;text-align:center;padding:92px 0;position:relative}
+  .strip.sea{background:linear-gradient(135deg,var(--sea),var(--deep2))}
+  .strip .q{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:2.4rem;line-height:1.5;max-width:860px;margin:0 auto;color:#fff}
+  .strip small{display:block;margin-top:22px;color:#9fc7b8;letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;font-family:'Rubik'}
+
+  /* ABOUT */
+  .about{background:var(--cream)}
+  .about h2{font-size:3.2rem;color:var(--ink)}
+  .about .body{max-width:780px;margin:0 auto;font-size:1.16rem;color:#3c382f}
+  .about .body p{margin-bottom:20px}
+  .about .pull{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.9rem;color:var(--sea);text-align:center;margin:30px auto;line-height:1.4}
+
+  /* EXCERPTS */
+  .excerpts{background:linear-gradient(180deg,var(--paper),var(--cream))}
+  .excerpts h2{font-size:2.8rem;color:var(--ink)}
+  .ex-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:46px}
+  .ex-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:44px 38px;position:relative;transition:.3s;box-shadow:0 6px 24px rgba(20,58,49,.05)}
+  .ex-card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(20,58,49,.14);border-color:var(--gold2)}
+  .ex-card:before{content:'\201C';font-family:'Cormorant Garamond',serif;font-size:5rem;color:var(--gold);opacity:.3;position:absolute;top:10px;right:26px;line-height:1}
+  .ex-card .q{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.6rem;line-height:1.55;color:var(--ink)}
+  .ex-card .src{margin-top:18px;color:var(--gold);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase}
+
+  /* FEATURE PHOTO */
+  .feature{min-height:70vh;display:flex;align-items:center;background:linear-gradient(90deg,rgba(14,42,36,.82),rgba(14,42,36,.4)),url('img/reading.jpg') center/cover fixed;color:#fff}
+  .feature .wrap{max-width:720px}
+  .feature .q{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:2.2rem;line-height:1.5}
+  .feature small{display:block;margin-top:20px;color:#9fc7b8;letter-spacing:.22em;text-transform:uppercase;font-size:.72rem}
+
+  /* BEHIND THE SCENES */
+  .bts{background:linear-gradient(180deg,var(--cream),var(--paper))}
+  .bts h2{font-size:2.8rem;color:var(--ink)}
+  .bts .intro{max-width:680px;margin:14px auto 0;color:var(--mut);font-size:1.08rem}
+  .pair{display:grid;grid-template-columns:1fr auto 1fr;gap:26px;align-items:center;max-width:860px;margin:54px auto 0}
+  .pair figure{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 18px 44px rgba(20,58,49,.16)}
+  .pair figure img{width:100%;height:330px;object-fit:cover;display:block;transition:.5s}
+  .pair figure:hover img{transform:scale(1.04)}
+  .pair .tag{position:absolute;top:14px;left:14px;background:rgba(14,42,36,.82);color:#fff;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;padding:7px 13px;border-radius:999px;backdrop-filter:blur(4px)}
+  .pair .ill-fig{background:var(--cream)}
+  .pair .ill-fig img{object-fit:contain;background:var(--cream);padding:10px}
+  .pair-arrow{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold);text-align:center}
+  .pair-cap{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;color:var(--sea);text-align:center;max-width:720px;margin:34px auto 0;line-height:1.5}
+  /* SKETCHES MARQUEE */
+  .sketches{background:var(--paper);overflow:hidden;padding:96px 0}
+  .sketches .head{text-align:center;padding:0 30px;margin-bottom:46px}
+  .sketches h2{font-size:2.8rem;color:var(--ink)}
+  .sketches .intro{max-width:620px;margin:14px auto 0;color:var(--mut);font-size:1.08rem}
+  .marquee-mask{position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+  .marquee{display:flex;gap:24px;width:max-content;animation:scrollx 115s linear infinite}
+  .marquee:hover{animation-play-state:paused}
+  .marquee img{height:300px;width:auto;border-radius:14px;box-shadow:0 12px 32px rgba(20,58,49,.12);background:var(--cream);border:1px solid var(--line)}
+  @keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* PHOTO GALLERY */
+  .gallery{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:14px;margin-top:56px}
+  .gallery figure{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 10px 28px rgba(20,58,49,.12)}
+  .gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:.7s}
+  .gallery figure:hover img{transform:scale(1.07)}
+  .gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:38px 16px 13px;background:linear-gradient(transparent,rgba(14,42,36,.88));color:#fff;font-size:.9rem;letter-spacing:.01em;opacity:0;transform:translateY(8px);transition:.35s;text-align:left}
+  .gallery figure:hover figcaption{opacity:1;transform:none}
+  .g-a{grid-column:span 2;grid-row:span 2}
+  .g-b{grid-column:span 2;grid-row:span 2}
+  .g-c{grid-column:span 2;grid-row:span 2}
+  .g-d{grid-column:span 2;grid-row:span 2}
+  .g-e{grid-column:span 2;grid-row:span 2}
+  .g-f{grid-column:span 3;grid-row:span 2}
+  .g-g{grid-column:span 3;grid-row:span 2}
+  .g-h{grid-column:span 2;grid-row:span 2}
+
+  /* AUTHOR */
+  .author{background:var(--cream)}
+  .author-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+  .author-photos{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:200px;gap:14px}
+  .author-photos img{width:100%;height:100%;object-fit:cover;border-radius:12px;box-shadow:0 14px 34px rgba(20,58,49,.16);transition:.3s}
+  .author-photos img:hover{transform:scale(1.02)}
+  .author-photos img.tall{grid-row:span 2}
+  .author-text h2{font-size:3rem}
+  .author-text .heb{color:var(--sea);font-size:1.25rem;margin:6px 0 20px}
+  .author-text p{color:#3c382f;margin-bottom:16px;font-size:1.08rem}
+  .author-text .sig{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.4rem;color:var(--sea)}
+  .links-row{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+  .chip{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border:1.5px solid var(--line);border-radius:999px;color:var(--sea);text-decoration:none;font-weight:500;font-size:.92rem;transition:.25s;background:#fff}
+  .chip:hover{border-color:var(--sea);background:var(--sea);color:#fff;transform:translateY(-2px)}
+
+  /* REVIEWS */
+  .reviews{background:linear-gradient(180deg,var(--panel),var(--paper))}
+  .reviews h2{font-size:2.8rem;color:var(--ink)}
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:46px}
+  .rev{background:#fff;border-radius:16px;padding:30px 28px;border:1px solid var(--line);display:flex;flex-direction:column;transition:.3s;box-shadow:0 6px 20px rgba(20,58,49,.05)}
+  .rev:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(20,58,49,.12)}
+  .stars{color:var(--gold);letter-spacing:3px;margin-bottom:12px}
+  .rev p{color:#3b372f;flex:1;font-size:1rem}
+  .rev .who{margin-top:16px;font-weight:500;color:var(--ink);font-size:.95rem}
+  .rev .who span{color:var(--sea);font-weight:400;font-size:.8rem}
+
+  /* SFAT HAYAM */
+  .sfat{background:linear-gradient(140deg,var(--deep),var(--deep2));color:#eef3ef;overflow:hidden}
+  .sfat-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .sfat-grid img{width:100%;height:380px;object-fit:cover;border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+  .sfat h2{color:#fff;font-size:2.8rem}
+  .sfat .heb{color:#9fc7b8;font-size:1.2rem;margin:6px 0 20px}
+  .sfat p{color:#cfe0d8;font-size:1.08rem;margin-bottom:16px}
+  .sfat .stat{font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--gold2);display:block;line-height:1}
+  .sfat .stat small{font-family:'Rubik';font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#9fc7b8;display:block;margin-top:6px}
+  .sfat .topline{text-align:center;max-width:820px;margin:0 auto 60px}
+  .sfat .topline h2{font-size:3.2rem}
+  .sfat .proceeds{display:inline-block;margin:22px auto 0;padding:18px 34px;border:1.5px solid var(--gold2);border-radius:16px;background:rgba(217,176,106,.08);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;color:#fff;line-height:1.4}
+  .sfat .proceeds b{color:var(--gold2);font-style:normal;font-weight:600}
+  .sfat-feature{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+  .sfat-feature img{width:100%;height:420px;object-fit:cover;border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+  .sfat-stats{display:flex;gap:40px;margin:26px 0 30px;flex-wrap:wrap}
+  .sfat-stats .stat{font-size:2.4rem}
+
+  /* FINAL */
+  .final{background:
+     radial-gradient(900px 500px at 50% 0%,rgba(63,122,110,.18),transparent 60%),
+     linear-gradient(180deg,var(--cream),var(--paper));text-align:center}
+  .final h2{font-size:3.4rem;color:var(--ink)}
+  .final .heb{color:var(--sea);font-size:1.5rem;margin:8px 0 28px}
+  .coming{display:inline-flex;gap:8px;align-items:center;padding:14px 30px;border:1.6px solid var(--gold);border-radius:999px;color:var(--gold);font-weight:600;letter-spacing:.03em}
+
+  footer{background:var(--deep);color:#b9c7c0;text-align:center;padding:56px 0;font-size:.92rem}
+  footer .ftitle{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:#fff;font-weight:600}
+  footer .flinks{margin-top:18px}
+  footer .flinks a{color:#e7ddcc;text-decoration:none;margin:0 12px;transition:.2s}
+  footer .flinks a:hover{color:var(--gold2)}
+  footer .fnote{margin-top:18px;color:#7f8c85;font-size:.78rem}
+
+  @media(max-width:860px){
+    .hero{min-height:auto;padding:100px 0 70px}
+    .hero-grid,.author-grid,.sfat-grid{grid-template-columns:1fr;gap:40px}
+    .hero-cover{order:-1}.hero-text{text-align:center}
+    .hero-text h1{font-size:3.8rem}.hero-text .lead{margin:0 auto}
+    .hero-cta,.links-row{justify-content:center}
+    .ex-grid,.rev-grid{grid-template-columns:1fr}
+    .about h2,.final h2{font-size:2.4rem}
+    .strip .q,.feature .q{font-size:1.65rem}
+    .feature{background-attachment:scroll}
+    section{padding:70px 0}
+    .pair{grid-template-columns:1fr;gap:16px}
+    .pair-arrow{transform:rotate(90deg)}
+    .pair figure img{height:260px}
+    .marquee img{height:220px}
+    .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:120px}
+    .g-a,.g-b,.g-c,.g-d,.g-e,.g-f,.g-g,.g-h{grid-column:span 1;grid-row:span 1}
+    .g-a,.g-f{grid-column:span 2;grid-row:span 2}
+    .sfat-feature{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <span class="eyebrow reveal">A Soldier's Diary · October 7th &amp; Beyond</span>
+      <h1 class="reveal d1">Dual Reality</h1>
+      <div class="hero-heb reveal d1">A diary from October 7th and beyond</div>
+      <p class="lead reveal d2">Written by a young paratrooper. In war.</p>
+      <p class="sub reveal d2">Not to tell a story of heroism — but because he had to get out what was inside.</p>
+      <div class="hero-cta reveal d3">
+        <span class="coming" style="border-color:var(--gold2);color:var(--gold2)">📖 Coming soon on Amazon</span>
+      </div>
+      <p class="hero-charity reveal d4">A portion of every copy supports <b style="color:#fff">reservists returning home</b>.</p>
+    </div>
+    <div class="hero-cover reveal d2"><img src="img/cover.jpg" alt="Dual Reality book cover"></div>
+  </div>
+  <div class="scroll-cue">scroll</div>
+</header>
+
+<!-- QUOTE -->
+<div class="strip">
+  <div class="wrap reveal"><div class="q">"I will never forget<br>what I don't understand."</div><small>From the book</small></div>
+</div>
+
+<!-- ABOUT -->
+<section class="about center">
+  <div class="wrap">
+    <span class="eyebrow reveal">About the book</span>
+    <div class="rule reveal"></div>
+    <h2 class="reveal">Two worlds, at once.</h2>
+    <div class="body">
+      <p class="reveal d1">Dual Reality was scripted by a soldier and written in war. It holds two parallel worlds at once: serving in the IDF reserves since October 7th — through Gaza, Lebanon and beyond — and the quiet, ordinary life waiting back home.</p>
+      <p class="pull reveal d1">"A digest of undigested emotions."</p>
+      <p class="reveal d2">Tal wrote it between operations, scribbling on scraps of paper and stuffing them into his vest, not to be seen for months. The writing is raw, because it had to be. His patriotism is organic; his love for the land and its people is private, not declarative.</p>
+      <p class="reveal d2">Short poems and original illustrations, written by a self-declared <b>"simple soldier."</b></p>
+    </div>
+  </div>
+</section>
+
+<!-- EXCERPTS -->
+<section class="excerpts center">
+  <div class="wrap">
+    <span class="eyebrow reveal">From the pages</span>
+    <div class="rule reveal"></div>
+    <h2 class="reveal">A few lines</h2>
+    <div class="ex-grid" style="text-align:right">
+      <div class="ex-card reveal d1"><div class="q">I asked for justice to rule,<br>swore that was my fighting fuel.<br>I promise to make it right —<br>even if I get lost in the fight.</div><div class="src">Days of Darkness</div></div>
+      <div class="ex-card reveal d2"><div class="q">I am sorry, friend, but no glory.<br>I wish this was a different story.<br>Maybe one not written in blood,<br>something that could be understood.</div><div class="src">A Different Story</div></div>
+      <div class="ex-card reveal d1"><div class="q">Maybe the rain<br>will wash away the red stains.</div><div class="src">October 8th</div></div>
+      <div class="ex-card reveal d2"><div class="q">Here there is no hero,<br>only people with no ego.<br>We are a simple sketch in Your frame —<br>You are painting, and adding the names.</div><div class="src">The Bigger Picture</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKETCHES MARQUEE -->
+<section class="sketches">
+  <div class="head">
+    <span class="eyebrow reveal">Inside the book</span>
+    <div class="rule reveal"></div>
+    <h2 class="reveal">The illustrations</h2>
+    <p class="intro reveal d1">Every poem is paired with a hand-drawn illustration — quiet, spare, drawn in the same places the words were written.</p>
+  </div>
+  <div class="marquee-mask reveal d1">
+    <div class="marquee">
+      <img src="img/sk/dog.jpg" alt="Illustration"><img src="img/sk/road.jpg" alt="Illustration"><img src="img/sk/tower.jpg" alt="Illustration"><img src="img/sk/sea.jpg" alt="Illustration"><img src="img/sk/together.jpg" alt="Illustration"><img src="img/sk/writing.jpg" alt="Illustration"><img src="img/sk/honey.jpg" alt="Illustration">
+      <img src="img/sk/dog.jpg" alt="Illustration"><img src="img/sk/road.jpg" alt="Illustration"><img src="img/sk/tower.jpg" alt="Illustration"><img src="img/sk/sea.jpg" alt="Illustration"><img src="img/sk/together.jpg" alt="Illustration"><img src="img/sk/writing.jpg" alt="Illustration"><img src="img/sk/honey.jpg" alt="Illustration">
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE (dog) -->
+<div class="feature">
+  <div class="wrap reveal">
+    <div class="q">In a destroyed kibbutz, he finds a lost dog.<br>He doesn't say the people were gone.<br>He just gives it water — and apologizes<br>for letting it down, too.</div>
+    <small>Kfar Aza · October 8th</small>
+  </div>
+</div>
+
+<!-- BEHIND THE SCENES -->
+<section class="bts center">
+  <div class="wrap">
+    <span class="eyebrow reveal">Behind the pages</span>
+    <div class="rule reveal"></div>
+    <h2 class="reveal">Every illustration holds a real moment</h2>
+    <p class="intro reveal d1">The book pairs quiet hand-drawn illustrations with the moments that inspired them. Behind each drawing is something Tal actually lived.</p>
+
+    <div class="pair reveal d1">
+      <figure class="ill-fig"><img src="img/dog-sketch.jpg" alt="Illustration of the dog in Kfar Aza"><span class="tag">The illustration</span></figure>
+      <div class="pair-arrow">→</div>
+      <figure><img src="img/dog-real.jpg" alt="The real lost dog in Kfar Aza"><span class="tag">The real moment</span></figure>
+    </div>
+    <p class="pair-cap reveal d1">A lost dog in the ruins of Kfar Aza. He gave it water, opened a can of food, and apologized for letting it down, too.</p>
+
+    <div class="gallery reveal d1">
+      <figure class="g-a"><img src="img/book-field.jpg" alt="Soldiers with the book in the field"><figcaption>The book, carried back to where it was written.</figcaption></figure>
+      <figure class="g-b"><img src="img/restface.jpg" alt="Between operations"><figcaption>Between two worlds.</figcaption></figure>
+      <figure class="g-c"><img src="img/reading-book.jpg" alt="Reading between operations"><figcaption>Reading, in the quiet between.</figcaption></figure>
+      <figure class="g-f"><img src="img/buddies.jpg" alt="With a brother in arms"><figcaption>Brothers in arms.</figcaption></figure>
+      <figure class="g-g"><img src="img/squad.jpg" alt="The unit"><figcaption>First-ever reserve duty. Paratroopers.</figcaption></figure>
+      <figure class="g-d"><img src="img/library.jpg" alt="At the National Library of Israel"><figcaption>At the National Library of Israel.</figcaption></figure>
+      <figure class="g-e"><img src="img/signing.jpg" alt="Book signing"><figcaption>Signing copies, back home.</figcaption></figure>
+      <figure class="g-h"><img src="img/vehicle.jpg" alt="On the move"><figcaption>On the move.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHOR -->
+<section class="author">
+  <div class="wrap author-grid">
+    <div class="author-photos reveal">
+      <img class="tall" src="img/portrait.jpg" alt="Tal in uniform">
+      <img src="img/lecture.jpg" alt="Tal speaking on stage">
+      <img src="img/brothers.jpg" alt="Tal with his unit">
+    </div>
+    <div class="author-text">
+      <span class="eyebrow reveal">The author</span>
+      <h2 class="reveal">Tal Hoch</h2>
+      <div class="hero-heb reveal d1" style="color:var(--sea);font-size:1.25rem;font-family:'Cormorant Garamond',serif;font-style:italic">"Hey, I'm Tal — one like everyone else."</div>
+      <p class="reveal d1">Tal is a paratrooper in the IDF reserves and a student of Business &amp; Entrepreneurship at Reichman University. A year ago he was living and working in New York and backpacking through South America, with a return ticket in hand.</p>
+      <p class="reveal d2">On October 7th, instead of that flight, he put on a uniform for his first-ever reserve duty — and served through Gaza, Lebanon and beyond. In the long nights between operations, he began to write. Not for a book. Just to survive.</p>
+      <p class="reveal d2">Those words became <i>Dual Reality</i>. The Hebrew edition has reached hundreds of readers and grew into talks and gatherings across Israel.</p>
+      <p class="sig reveal d3">"One of many — a paratrooper, a regular guy, a small soldier."</p>
+      <div class="links-row reveal d3">
+        <a class="chip" href="https://www.instagram.com/tal_hoch" target="_blank" rel="noopener">◎ Instagram</a>
+        <a class="chip" href="https://www.metziotkfula.com/" target="_blank" rel="noopener">⬡ Hebrew website</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews center">
+  <div class="wrap">
+    <span class="eyebrow reveal">What readers say</span>
+    <div class="rule reveal"></div>
+    <h2 class="reveal">From the Hebrew edition</h2>
+    <p class="reveal" style="color:var(--mut);max-width:620px;margin:12px auto 0">The Hebrew edition has already reached hundreds of readers across Israel.</p>
+    <div class="rev-grid" style="text-align:left">
+      <div class="rev reveal d1"><div class="stars">★★★★★</div><p>"I bought it for my husband, who came home from the reserves. He read it in one breath and said: this is exactly what I feel, but could never put into words."</p><div class="who">Ronit A. <span>· verified reader</span></div></div>
+      <div class="rev reveal d2"><div class="stars">★★★★★</div><p>"As a reservist myself, this book made me feel that someone finally understands. Thank you, Tal."</p><div class="who">Alon D. <span>· verified reader</span></div></div>
+      <div class="rev reveal d3"><div class="stars">★★★★★</div><p>"Written straight from the deepest rooms of the heart. He captured every emotion a fighter carries but can't express."</p><div class="who">Ron S. <span>· verified reader</span></div></div>
+      <div class="rev reveal d1"><div class="stars">★★★★★</div><p>"I read it in one night. Honest, raw, and moving — and the illustrations add so much. A book for everyone."</p><div class="who">Alma S. <span>· verified reader</span></div></div>
+      <div class="rev reveal d2"><div class="stars">★★★★★</div><p>"Someone sent me a single line from the book. I ordered it that evening. Now I'm the one sending lines onward."</p><div class="who">Shachar H. <span>· verified reader</span></div></div>
+      <div class="rev reveal d3"><div class="stars">★★★★★</div><p>"I bought it for my father. He called two hours later, his voice breaking, just to say thank you. A rare book."</p><div class="who">Rotem G. <span>· verified reader</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SFAT HAYAM -->
+<section class="sfat">
+  <div class="wrap">
+    <div class="topline">
+      <span class="eyebrow reveal" style="color:var(--gold2)">The cause behind the book</span>
+      <h2 class="reveal">Every copy gives back</h2>
+      <div class="proceeds reveal d1">A portion of <b>every single copy</b> of <i>Dual Reality</i> goes directly to <b>Sfat HaYam</b> — helping reservists find their way home.</div>
+    </div>
+    <div class="sfat-feature">
+      <img class="reveal" src="img/beach.jpg" alt="Sfat HaYam — healing by the sea">
+      <div>
+        <h2 class="reveal" style="font-size:2.4rem">Sfat HaYam</h2>
+        <p class="reveal d1" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;color:var(--gold2);margin-bottom:18px">Breath, water, and a way back.</p>
+        <p class="reveal d1">Sfat HaYam ("The Shore") was born during the war. It walks alongside IDF reservists and bereaved families on the hardest road of all — the one back to ordinary life. Through workshops of breathwork, freediving and cold-water immersion, it helps them build personal anchors and the tools to carry what they've seen.</p>
+        <p class="reveal d2">It's the quiet answer to the question at the heart of this book: what we really needed wasn't someone with the right words — it was someone who would simply be there.</p>
+        <div class="sfat-stats reveal d2">
+          <span class="stat">2,000+<small>participants so far</small></span>
+          <span class="stat">Since 2023<small>born during the war</small></span>
+        </div>
+        <div class="links-row reveal d3">
+          <a class="chip" style="background:var(--gold);color:#2a2008;border-color:var(--gold)" href="https://www.sfat-hayam.com/" target="_blank" rel="noopener">🌊 Visit sfat-hayam.com →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final">
+  <div class="wrap">
+    <span class="eyebrow reveal">Let's keep moving forward</span>
+    <h2 class="reveal">Dual Reality</h2>
+    <div class="hero-heb reveal d1" style="color:var(--sea);font-family:'Cormorant Garamond',serif;font-style:italic">A story of loss, choice, and what we carry forward.</div>
+    <div class="reveal d1"><span class="coming">📖 Coming soon on Amazon · Kindle &amp; Paperback</span></div>
+    <p class="reveal d2" style="color:var(--mut);margin-top:22px">Follow <a href="https://www.instagram.com/tal_hoch" target="_blank" rel="noopener">@tal_hoch</a> to know the moment it's live.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ftitle">Dual Reality</div>
+    <div class="flinks">
+      <a href="https://www.instagram.com/tal_hoch" target="_blank" rel="noopener">Instagram</a> ·
+      <a href="https://www.metziotkfula.com/" target="_blank" rel="noopener">Hebrew Website</a> ·
+      <a href="https://www.sfat-hayam.com/" target="_blank" rel="noopener">Sfat HaYam</a>
+    </div>
+    <div class="fnote">© Tal Hoch · Illustrations &amp; cover by Shahar Yitzhaki · A soldier's diary from October 7th and beyond.</div>
+  </div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+.DS_Store
+_assets/
+*.zip
+node_modules/
+.vercel
